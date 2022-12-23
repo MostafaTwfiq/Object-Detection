@@ -13,6 +13,12 @@
   - [1.4. Class definitions](#14-class-definitions)
   - [1.5. Preparing the dataset](#15-preparing-the-dataset)
 - [Results](#results)
+  - [Faster R-CNN ResNet-50](#faster-r-cnn-resnet-50)
+    - [Using confidence threshold = 0.5](#using-confidence-threshold--05)
+    - [Using confidence threshold = 0.75](#using-confidence-threshold--075)
+    - [Using confidence threshold = 0.9](#using-confidence-threshold--09)
+  - [Faster R-CNN MobileNet-V3](#faster-r-cnn-mobilenet-v3)
+    - [No threshold](#no-threshold)
 
 ## 1.1. Overview of Open Images V6
 
@@ -185,3 +191,106 @@ We evaluate each of the following models on the validation set of the open image
 1. Faster R-CNN with ResNet-50
 2. Faster R-CNN with MobileNet-V3
 3. SSD
+
+## Faster R-CNN ResNet-50
+
+Evaluation time: 6.3 samples/sec
+
+mAP : 0.0876
+
+![table](resnet50/nothresh.png)
+
+![plot](resnet50/plot.png)
+
+![map](resnet50/map.png)
+
+![plt](resnet50/thresh50/plt.png)
+
+{'fn': 8375, 'tp': 1677, 'fp': 27439}
+
+IOU Score 0.03565895646746864
+
+
+### Using confidence threshold = 0.5
+
+![table](resnet50/thresh50/map.png)
+
+![avg](resnet50/thresh50/avg.png)
+
+![plot](resnet50/thresh50/plot.png)
+
+![plt](resnet50/thresh50/plt50.png)
+
+accuracy :  0.09251302083333333
+
+precision :  0.21117550899093476
+
+recall :  0.1413649025069638
+
+fscore :  0.16935820272927715
+
+{'tp': 1421, 'fp': 5588, 'fn': 8631}
+
+IOU Score 0.07371190296045621
+
+### Using confidence threshold = 0.75
+
+![map](resnet50/thresh75/map.png)
+
+![avg](resnet50/thresh75/avg.png)
+
+![plot](resnet50/thresh75/plot.png)
+
+accuracy :  0.09589982438726426
+precision :  0.2920251104394327
+recall :  0.12495025865499403
+fscore :  0.1750156761652616
+
+![plt](resnet50/thresh75/plt.png)
+
+{'fn': 8796, 'tp': 1256, 'fp': 3190}
+
+IOU Score 0.07759311243309393
+
+### Using confidence threshold = 0.9
+
+![map](resnet50/thresh90/map.png)
+
+![avg](resnet50/thresh90/avg.png)
+
+![plot](resnet50/thresh90/plot.png)
+
+accuracy :  0.08701902748414377
+precision :  0.367237687366167
+recall :  0.10236768802228412
+fscore :  0.16010580364089
+
+![plt](resnet50/thresh90/plt.png)
+
+{'tp': 1029, 'fn': 9023, 'fp': 1839}
+
+IOU Score 0.07176685677122789
+
+## Faster R-CNN MobileNet-V3
+
+### No threshold
+
+![map](mobilenetv3/map.png)
+
+![avg](mobilenetv3/avg.png)
+
+![plot](mobilenetv3/plot.png)
+
+![plt](mobilenetv3/plt.png)
+
+accuracy :  0.06180111821086262
+
+precision :  0.11035835264753076
+
+recall :  0.12315957023477915
+
+fscore :  0.11640808650681711
+
+{'tp': 1029, None: 26248, 'fn': 9023, 'fp': 1839}
+
+IOU Score 0.02237551309333415

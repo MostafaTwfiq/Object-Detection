@@ -21,6 +21,12 @@
     - [No threshold](#no-threshold)
     - [Using confidence threshold = 0.5](#using-confidence-threshold--05-1)
     - [Using confidence threshold = 0.75](#using-confidence-threshold--075-1)
+    - [Using confidence threshold = 0.9](#using-confidence-threshold--09-1)
+  - [SSD](#ssd)
+    - [Using confidence threshold = 0.1](#using-confidence-threshold--01)
+    - [Using confidence threshold = 0.5](#using-confidence-threshold--05-2)
+    - [Using confidence threshold = 0.75](#using-confidence-threshold--075-2)
+    - [Using confidence threshold = 0.9](#using-confidence-threshold--09-2)
 
 ## 1.1. Overview of Open Images V6
 
@@ -275,6 +281,8 @@ IOU Score 0.07176685677122789
 
 ## Faster R-CNN MobileNet-V3
 
+Evaluation time: 14 samples/sec
+
 ### No threshold
 
 ![map](mobilenetv3/map.png)
@@ -334,3 +342,98 @@ fscore :  0.14353499406880188
 {'fn': 9205, 'tp': 847, 'fp': 925}
 
 IOU Score 0.06511874350534122
+
+### Using confidence threshold = 0.9
+
+
+![map](mobilenetv3/thresh90/map.png)
+
+![avg](mobilenetv3/thresh90/avg.png)
+
+![plot](mobilenetv3/thresh90/plot.png)
+
+![plt](mobilenetv3/thresh90/plt.png)
+
+accuracy :  0.06494485813931568
+precision :  0.5529695024077047
+recall :  0.06854357341822523
+fscore :  0.12196848999822978
+
+{'fn': 9363, 'tp': 689, 'fp': 567}
+
+IOU Score 0.05545436412649866
+
+## SSD
+
+Evaluation time: 4.8 samples/sec
+
+### Using confidence threshold = 0.1
+
+![map](ssd/map.png)
+
+![avg](ssd/avg.png)
+
+![plot](ssd/plot.png)
+
+![plt](ssd/plt.png)
+
+accuracy :  0.041040518955569316
+precision :  0.057530615975141655
+recall :  0.12524870672502986
+fscore :  0.07884519038076153
+
+IOU Score 0.031539423830333736
+
+{'fp': 22109, 'fn': 8793, 'tp': 1259}
+
+### Using confidence threshold = 0.5
+
+![map](ssd/thresh50/map.png)
+
+![avg](ssd/thresh50/avg.png)
+
+![plot](ssd/thresh50/plot.png)
+
+![plt](ssd/thresh50/plt.png)
+
+accuracy :  0.07298464932438643
+precision :  0.48982109808760027
+recall :  0.0789892558694787
+fscore :  0.13604043519232414
+
+{'fp': 842, 'fn': 9258, 'tp': 794}
+
+IOU Score 0.06277767370556407
+
+### Using confidence threshold = 0.75
+
+![map](ssd/thresh75/map.png)
+
+![avg](ssd/thresh75/avg.png)
+
+![plot](ssd/thresh75/plot.png)
+
+![plt](ssd/thresh75/plt.png)
+
+'fn': 9415, 'tp': 637, 'fp': 464}
+
+IOU Score 0.05322200448161114
+
+### Using confidence threshold = 0.9
+
+![map](ssd/thresh90/map.png)
+
+![avg](ssd/thresh90/avg.png)
+
+![plot](ssd/thresh90/plot.png)
+
+![plt](ssd/thresh90/plt.png)
+
+accuracy :  0.04587333915236155
+precision :  0.6461748633879781
+recall :  0.04705531237564664
+fscore :  0.0877225519287834
+
+{'fn': 9579, 'tp': 473, 'fp': 260}
+
+IOU Score 0.040478422994867286

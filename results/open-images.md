@@ -19,6 +19,8 @@
     - [Using confidence threshold = 0.9](#using-confidence-threshold--09)
   - [Faster R-CNN MobileNet-V3](#faster-r-cnn-mobilenet-v3)
     - [No threshold](#no-threshold)
+    - [Using confidence threshold = 0.5](#using-confidence-threshold--05-1)
+    - [Using confidence threshold = 0.75](#using-confidence-threshold--075-1)
 
 ## 1.1. Overview of Open Images V6
 
@@ -294,3 +296,41 @@ fscore :  0.11640808650681711
 {'tp': 1029, None: 26248, 'fn': 9023, 'fp': 1839}
 
 IOU Score 0.02237551309333415
+
+### Using confidence threshold = 0.5
+
+![map](mobilenetv3/thresh50/map.png)
+
+![avg](mobilenetv3/thresh50/avg.png)
+
+![plot](mobilenetv3/thresh50/plot.png)
+
+![plt](mobilenetv3/thresh50/plt.png)
+
+accuracy :  0.08462792893313878
+precision :  0.38143133462282397
+recall :  0.0980899323517708
+fscore :  0.15604969533908367
+
+{'fp': 1656, 'tp': 986, 'fn': 9066}
+
+IOU Score 0.06987636876256666
+
+### Using confidence threshold = 0.75
+
+![map](mobilenetv3/thresh75/map.png)
+
+![avg](mobilenetv3/thresh75/avg.png)
+
+![plot](mobilenetv3/thresh75/plot.png)
+
+![plt](mobilenetv3/thresh75/plt.png)
+
+accuracy :  0.07731629392971245
+precision :  0.484
+recall :  0.08426183844011143
+fscore :  0.14353499406880188
+
+{'fn': 9205, 'tp': 847, 'fp': 925}
+
+IOU Score 0.06511874350534122

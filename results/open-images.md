@@ -200,7 +200,13 @@ We evaluate each of the following models on the validation set of the open image
 2. Faster R-CNN with MobileNet-V3
 3. SSD
 
+We will consider this image as a referrence
+
+![img](canvas.png)
+
 ## Faster R-CNN ResNet-50
+
+![img](fcnresnet50.png)
 
 Evaluation time: 6.3 samples/sec
 
@@ -282,6 +288,8 @@ IOU Score 0.07176685677122789
 ## Faster R-CNN MobileNet-V3
 
 Evaluation time: 14 samples/sec
+
+![img](mobilenet.png)
 
 ### No threshold
 
@@ -366,6 +374,8 @@ IOU Score 0.05545436412649866
 ## SSD
 
 Evaluation time: 4.8 samples/sec
+
+![img](ssd41.png)
 
 ### Using confidence threshold = 0.1
 
